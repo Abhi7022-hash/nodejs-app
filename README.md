@@ -7,7 +7,7 @@ This is a simple Node.js Application deployed using "Docker" and Automated with 
 - Setup Instructions
 - CI/CD Pipeline Details
 - Docker Usage
-  
+- Author
 
 ## Project Overview
 
@@ -38,7 +38,7 @@ Before setting up the project, ensure you have the following installed:
  cd nodejs-app
  npm install
  npm start
-Now this application will be accessible at http://localhost:3000.
+ Now this application will be accessible at http://localhost:3000.
 
 ## CI/CD Pipeline Details
 
