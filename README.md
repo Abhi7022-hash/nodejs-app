@@ -69,6 +69,9 @@ docker build -t abhishek661/nodejs-app:task1 .  [Add your Dockerhub Username]
 - Run the Docker Container
 docker run -p 3000:3000 abhishek661/nodejs-app:task1  [Add your Dockerhub Username]
 
+## CI/CD Output
+![Alt text](relative/path/to/abhicicd.png)
+
 Author
 Abhishek Dindawar
 
