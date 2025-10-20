@@ -1,5 +1,5 @@
 # Use an official lightweight Node image
-FROM node:18-alpine
+FROM node:18-alpine 
 
 # Set working directory inside container
 WORKDIR /usr/src/app
