@@ -1,7 +1,5 @@
-# Use an official lightweight Node image
-FROM node:18-alpine 
-
-# Set working directory inside container
+# Stage 1: Build dependencies
+FROM node:18-alpine AS builder
 WORKDIR /usr/src/app
 
 # Copy package files
@@ -10,12 +8,20 @@ COPY package*.json ./
 # Install only production dependencies
 RUN npm ci --only=production
 
-# Copy the rest of the source code
+# Copy app source code
 COPY . .
 
-# Expose port 3000
+# Stage 2: Final image
+FROM node:18-alpine
+WORKDIR /usr/src/app
+
+# Copy from builder
+COPY --from=builder /usr/src/app .
+
+# Expose app port
 EXPOSE 3000
 
 # Start the app
 CMD ["node", "src/app.js"]
+
 
