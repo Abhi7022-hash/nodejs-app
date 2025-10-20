@@ -43,5 +43,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-app:task1 this is my yml file
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-app:task1
 
